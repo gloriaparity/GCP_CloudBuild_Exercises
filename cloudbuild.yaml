@@ -6,13 +6,13 @@ steps:
       - 'instances'
       - 'create'
       - 'gcptest-vm1'          
-      - '--zone=us-east1-b'         
+      - '--zone=us-east1-c'         
       - '--machine-type=n1-standard-2'  
       - '--image-family=windows-2019'   
       - '--image-project=windows-cloud' 
       - '--boot-disk-size=50GB'         
       - '--boot-disk-type=pd-standard'  
-      - '--metadata=windows-startup-script-ps1=Add-LocalUser -Name "admin-user" -Password (ConvertTo-SecureString "Admin123" -AsPlainText -Force); Add-LocalGroupMember -Group "Administrators" -Member "admin_user"'
+      - '--metadata=windows-startup-script-ps1=Add-LocalUser -Name "admin-user" -Password (ConvertTo-SecureString "Admin12i3" -AsPlainText -Force); Add-LocalGroupMember -Group "Administrators" -Member "admin_user"'
       - '--tags=http-server,https-server'  
   
 
