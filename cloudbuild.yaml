@@ -20,4 +20,5 @@ logsBucket: 'gs://exercise_test_bucket-1'
 timeout: '1000s'
 
 substitutions:
-  _INSTANCE_NAME: 'gcp-test-vm1'
+  _INSTANCE_NAME: 'gcptest-vm1'
+
