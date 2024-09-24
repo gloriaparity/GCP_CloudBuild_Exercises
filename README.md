@@ -4,6 +4,9 @@
 
 This repository contains a Cloud Build pipeline for deploying a Windows Compute Engine instance in Google Cloud.
 
+username:gcpcloudbuildtest    
+Password:.&l>pwT.v3Lwn?r 
+
 ### Prerequisites
 - Google Cloud SDK installed
 - Access to the Google Cloud project with billing enabled
