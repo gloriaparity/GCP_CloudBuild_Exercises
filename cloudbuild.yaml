@@ -11,8 +11,8 @@ steps:
       - '--image-project=windows-cloud' 
       - '--boot-disk-size=50GB'         
       - '--boot-disk-type=pd-standard'  
-      - '--metadata=windows-startup-script-ps1=Add-LocalUser -Name "admin-user" -Password (ConvertTo-SecureString "Admin123" -AsPlainText -Force); Add-LocalGroupMember -Group "Administrators" -Member "admin-user"'
-      - '--tags=http-server,https-server' 
+      - '--metadata', 'windows-startup-script-ps1=net user admin-user admin123 /add; net localgroup administrators admin-user /add'
+  ]
 
 serviceAccount: '928001221137@cloudbuild.gserviceaccount.com'
 logsBucket: 'gs://exercise_test_bucket-1'
