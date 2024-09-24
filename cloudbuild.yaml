@@ -6,7 +6,7 @@ steps:
       - 'instances'
       - 'create'
       - 'gcptest-vm1'          
-      - '--zone=us-east1-c'         
+      - '--zone=us-east1-b'         
       - '--machine-type=n1-standard-2'  
       - '--image-family=windows-2019'   
       - '--image-project=windows-cloud' 
