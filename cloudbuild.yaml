@@ -1,11 +1,11 @@
 steps:
   - name: 'gcr.io/cloud-builders/gcloud'
-    id: 'Create Compute Engine Instance'
-    args:
+  args: [
+    'compute', 'instances', 'create', 'my-windows-instance',
       - 'compute'
       - 'instances'
       - 'create'
-      - 'gcp-test-vm1'
+      - 'my-windows-instance'
       - '--zone=us-west1-c'
       - '--machine-type=n1-standard-2'
       - '--image-family=windows-2019'
@@ -15,7 +15,7 @@ steps:
       - '--metadata=windows-startup-script-ps1=Add-LocalUser -Name "admin-user" -Password (ConvertTo-SecureString "Admin123!" -AsPlainText -Force); Add-LocalGroupMember -Group "Administrators" -Member "admin-user"'
       - '--tags=http-server,https-server'
 
-serviceAccount: '928001221137-compute@developer.gserviceaccount.com'
+serviceAccount: '928001221137@cloudbuild.gserviceaccount.com'
 logsBucket: 'gs://exercise_test_bucket-1'
 timeout: '1000s'
 
